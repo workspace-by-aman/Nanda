@@ -2,64 +2,141 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="w-full bg-white text-gray-800">
+      {/* ================= HEADER ================= */}
+      <header className="w-full border-b sticky top-0 z-50 bg-white">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+          <Image src="/logo.png" alt="Nanda Logo" width={50} height={50} />
+
+          <nav className="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#" className="font-bold">Home</a>
+            <a href="#about" className="font-bold">About Us</a>
+            <a href="#stores" className="font-bold">Our Stores</a>
+            <a href="#products" className="font-bold">Products</a>
+          </nav>
+
+          <button className="bg-green-800 text-white px-5 py-2 rounded-full text-sm">
+            Call Us
+          </button>
+        </div>
+      </header>
+
+      {/* ================= HERO ================= */}
+      <section className="relative h-[500px] flex items-center justify-center text-center">
+        <Image src="/banner.jpg" alt="Banner" fill className="object-cover" priority />
+        <div className="absolute inset-0 bg-white/70" />
+
+        <div className="relative z-10">
+          <h1 className="text-5xl font-bold mb-3">Fresh & Organic</h1>
+          <p className="mb-6 text-lg">Farm to Table Excellence</p>
+          <a href="#stores" className="bg-green-800 text-white px-6 py-3 rounded">
+            Find A Store
+          </a>
+        </div>
+      </section>
+
+      {/* ================= WHY CHOOSE ================= */}
+      <section className="max-w-7xl mx-auto px-6 py-16 text-center" id="about">
+        <h2 className="text-3xl font-bold mb-4">About Nanda</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-12" >
+          We’re committed to bringing you the freshest fruits & groceries
+          from local farms to your table.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="relative h-48 rounded overflow-hidden">
+              <Image src="/banner.jpg" alt="Feature" fill className="object-cover" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= VISIT OUR STORES ================= */}
+      <section className="bg-gray-50 py-16 text-center">
+        <h2 className="text-3xl font-bold mb-2" id="stores">Visit Our Stores</h2>
+        <p className="text-gray-600 mb-10">
+          Find a Nanda – Fruiterers & Grocers near you.
+        </p>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="relative h-48 border rounded">
+              <Image src="/banner.jpg" alt="Store" fill className="object-cover" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= FEATURED PRODUCTS ================= */}
+      <section className="max-w-7xl mx-auto px-6 py-16 text-center">
+        <h2 className="text-3xl font-bold mb-2" id="products">Featured Products</h2>
+        <p className="text-gray-600 mb-10">
+          Explore our wide range of fresh fruits and organic groceries
+        </p>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className="relative h-40 border rounded">
+              <Image src="/banner.jpg" alt="Product" fill className="object-cover" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= GET IN TOUCH ================= */}
+      {/* ================= GET IN TOUCH ================= */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-3">
+            Get In Touch
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            Have questions? We’d love to hear from you. Give us a call!
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+            {/* Visit Us */}
+            <div className="flex gap-3">
+              <span className="text-red-500 text-lg">📍</span>
+              <div>
+                <h4 className="font-semibold mb-1">Visit Us</h4>
+                <p>Shop No. 45, City Centre</p>
+                <p>Ludhiana, Punjab</p>
+              </div>
+            </div>
+
+            {/* Call Us */}
+            <div className="flex gap-3">
+              <span className="text-green-600 text-lg">📞</span>
+              <div>
+                <h4 className="font-semibold mb-1">Call Us</h4>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+
+            {/* Email Us */}
+            <div className="flex gap-3">
+              <span className="text-yellow-500 text-lg">✉️</span>
+              <div>
+                <h4 className="font-semibold mb-1">Email Us</h4>
+                <p>support@nanda.com</p>
+              </div>
+            </div>
+
+            {/* Business Hours */}
+            <div className="flex gap-3">
+              <span className="text-blue-500 text-lg">⏰</span>
+              <div>
+                <h4 className="font-semibold mb-1">Business Hours</h4>
+                <p>Mon – Sun</p>
+                <p>8:00 AM – 10:00 PM</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+    </main>
   );
 }
