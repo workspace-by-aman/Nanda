@@ -57,13 +57,12 @@ export function StoreGallerySection() {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:auto-rows-[14rem] xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {storeGallery.map((item, index) => (
             <article
               key={item.title}
-              className={index === 0 ? "md:col-span-2 xl:col-span-1 xl:row-span-2" : ""}
             >
-              <div className="group relative h-[280px] overflow-hidden rounded-[28px] border border-white/40 bg-white shadow-[0_24px_70px_rgba(19,56,39,0.12)] transition-all duration-300 hover:shadow-[0_32px_90px_rgba(19,56,39,0.16)] sm:h-[320px] xl:h-full">
+              <div className="group relative h-[280px] overflow-hidden rounded-[28px] border border-white/40 bg-white shadow-[0_24px_70px_rgba(19,56,39,0.12)] transition-all duration-300 hover:shadow-[0_32px_90px_rgba(19,56,39,0.16)] sm:h-[320px] xl:h-[280px]">
                 <Image
                   src={item.image}
                   alt={item.title}
