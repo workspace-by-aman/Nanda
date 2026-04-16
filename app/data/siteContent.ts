@@ -63,27 +63,43 @@ export const offerings = [
   },
 ] as const;
 
+export const heroShowcase = {
+  image: "/nanda-web/IMG_1308.jpg",
+  imageAlt: "Dragon fruit display at Nanda Fruiterers",
+  objectPosition: "center",
+  accentImage: "/nanda-web/IMG_1251.jpg",
+  accentImageAlt: "Premium orange fruit jar at Nanda Fruiterers",
+  accentObjectPosition: "center",
+} as const;
+
 export const productGallery = [
   {
-    title: "Seasonal Fresh Fruits",
+    title: "Fresh Avocado Selection",
     description:
-      "Colourful seasonal selections prepared to look vibrant and taste naturally rich.",
-    image: "/banner.jpg",
-    objectPosition: "50% 45%",
+      "Real in-store produce photography that highlights the freshness and abundance of Nanda selections.",
+    image: "/nanda-web/IMG_1156.jpg",
+    objectPosition: "center 42%",
   },
   {
-    title: "Cold-Pressed Juice Range",
+    title: "Premium Melon Display",
     description:
-      "Refreshing juice options crafted to feel clean, energising, and premium.",
-    image: "/banner.jpg",
+      "Neatly arranged premium fruit displays bring quality, freshness, and presentation together.",
+    image: "/nanda-web/IMG_1232.jpg",
     objectPosition: "center",
   },
   {
-    title: "Fruit Bowls & Healthy Servings",
+    title: "Signature Fruit Collection",
     description:
-      "Convenient, wholesome combinations made for quick meals and smarter snacking.",
-    image: "/banner.jpg",
-    objectPosition: "50% 65%",
+      "From grapes to specialty fruits, every collection is presented to feel premium and gift-worthy.",
+    image: "/nanda-web/IMG_1299.jpg",
+    objectPosition: "center",
+  },
+  {
+    title: "Dragon Fruit Showcase",
+    description:
+      "Bold, vibrant premium fruit styling that gives the collection a striking signature presence.",
+    image: "/nanda-web/IMG_1305.jpg",
+    objectPosition: "center",
   },
 ] as const;
 
@@ -92,15 +108,22 @@ export const storeGallery = [
     title: "Welcoming Retail Experience",
     description:
       "A fresh, organised environment where quality and presentation stand out instantly.",
-    image: "/banner.jpg",
-    objectPosition: "50% 38%",
+    image: "/nanda-web/IMG_1137.jpg",
+    objectPosition: "center",
   },
   {
     title: "Premium Display Standards",
     description:
       "Every section is arranged with care so freshness feels visible from the first glance.",
-    image: "/banner.jpg",
-    objectPosition: "50% 52%",
+    image: "/nanda-web/IMG_1297.jpg",
+    objectPosition: "center",
+  },
+  {
+    title: "Curated Shelf Presentation",
+    description:
+      "A polished shelf layout helps the space feel organised, inviting, and consistently premium.",
+    image: "/nanda-web/IMG_1230.jpg",
+    objectPosition: "center",
   },
 ] as const;
 
